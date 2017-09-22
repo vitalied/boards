@@ -11,7 +11,7 @@ class BoardsController < ApplicationController
 
   # GET /boards/:id
   def show
-    render json: @board, include: :lists
+    render json: @board, include: { lists: { include: :tasks } }
   end
 
   # POST /boards
@@ -46,7 +46,7 @@ class BoardsController < ApplicationController
     end
 
     def set_board_with_chields
-      @board = Board.includes(:lists).find(params[:id])
+      @board = Board.includes(lists: [:tasks]).find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.

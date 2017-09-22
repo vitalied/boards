@@ -5,7 +5,9 @@ Rails.application.routes.draw do
 
     scope :api do
       resources :boards do
-        resources :lists, controller: 'boards/lists', only: [:create, :update, :destroy]
+        resources :lists, controller: 'boards/lists', only: [:create, :update, :destroy] do
+          resources :tasks, controller: 'boards/lists/tasks', only: [:create, :update, :destroy]
+        end
       end
     end
   end
