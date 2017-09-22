@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     root to: -> {[404, {}, ['']]}
 
     scope :api do
+      resources :boards
     end
   end
 
