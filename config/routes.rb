@@ -4,7 +4,9 @@ Rails.application.routes.draw do
     root to: -> {[404, {}, ['']]}
 
     scope :api do
-      resources :boards
+      resources :boards do
+        resources :lists, controller: 'boards/lists', only: [:create, :update, :destroy]
+      end
     end
   end
 

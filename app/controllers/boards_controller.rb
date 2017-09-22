@@ -1,5 +1,6 @@
 class BoardsController < ApplicationController
-  before_action :set_board, only: [:show, :update, :destroy]
+  before_action :set_board, only: [:update, :destroy]
+  before_action :set_board_with_chields, only: [:show]
 
   # GET /boards
   def index
@@ -10,7 +11,7 @@ class BoardsController < ApplicationController
 
   # GET /boards/:id
   def show
-    render json: @board
+    render json: @board, include: :lists
   end
 
   # POST /boards
@@ -42,6 +43,10 @@ class BoardsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_board
       @board = Board.find(params[:id])
+    end
+
+    def set_board_with_chields
+      @board = Board.includes(:lists).find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
