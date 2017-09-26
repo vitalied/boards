@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+
+.list-placeholder {
+  background: rgba(0,0,0,.15);
+  border: 2px dashed #999;
+  border-radius: 0.25rem;
+  display: inline-block;
+  margin-right: 0.5rem;
+  width: 250px;
+}
+
+.task-placeholder {
+  background: rgba(0,0,0,.15);
+  border: 2px dashed #777;
+  border-radius: 0.25rem;
+  margin-bottom: 0.5rem ;
+  height: 40px;
+}

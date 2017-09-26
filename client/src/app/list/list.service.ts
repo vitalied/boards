@@ -14,4 +14,9 @@ export class ListService {
     const url = `${this.apiUrl}/${board_id}/lists`;
     return this._http.post<List>(url, { list: { name: name } }, { headers: this.headers });
   }
+
+  updateListPosition(board_id: number, list_id: number, position: number) {
+    const url = `${this.apiUrl}/${board_id}/lists/${list_id}`;
+    return this._http.patch<List>(url, { list: { position: position } }, { headers: this.headers });
+  }
 }
