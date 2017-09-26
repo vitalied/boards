@@ -1,0 +1,8 @@
+.task {
+  background-color: white;
+  cursor: move;
+}
+
+.task-name {
+  font-size: 0.8em;
+}

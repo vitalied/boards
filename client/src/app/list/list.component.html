@@ -3,4 +3,17 @@
      [attr.list-position]="list?.position"
      class="list rounded mr-sm-2 p-sm-2">
   <div class="list-name mb-sm-2">{{list.name}}</div>
+
+  <div class="list-content">
+    <div *ngFor="let task of list.tasks" class="sortable-task">
+      <app-task [task]="task"></app-task>
+    </div>
+  </div>
+
+  <form class="add-task mt-sm-2">
+    <input #taskName class="form-control" placeholder="Add a task..." type="text">
+    <button (click)="addTask(taskName.value); taskName.value=''"
+            class="btn btn-success btn-sm mt-sm-2" type="submit">Add
+    </button>
+  </form>
 </div>

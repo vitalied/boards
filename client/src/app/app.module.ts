@@ -7,19 +7,22 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { BoardService } from './board/board.service';
 import { ListService } from './list/list.service';
+import { TaskService } from './task/task.service';
 
 import { AppComponent } from './app.component';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { BoardComponent } from './board/board.component';
 import { ListComponent } from './list/list.component';
+import { TaskComponent } from './task/task.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     BoardComponent,
-    ListComponent
+    ListComponent,
+    TaskComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,8 @@ import { ListComponent } from './list/list.component';
   ],
   providers: [
     BoardService,
-    ListService
+    ListService,
+    TaskService
   ],
   bootstrap: [
     AppComponent

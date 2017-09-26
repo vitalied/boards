@@ -1,0 +1,7 @@
+<div *ngIf="task"
+     [attr.task-id]="task?.id"
+     [attr.task-list-id]="task?.list_id"
+     [attr.task-position]="task?.position"
+     class="task rounded mb-sm-2 p-sm-2">
+  <span class="task-name">{{task.name}}</span>
+</div>

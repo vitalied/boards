@@ -15,3 +15,7 @@
   max-height: calc(100vh - 230px);
   overflow-y: auto;
 }
+
+.add-task input {
+  background-color: #eee;
+}
