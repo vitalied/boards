@@ -1,0 +1,17 @@
+.board {
+  height: 110px;
+}
+
+.board a.btn {
+  background: rgb(0, 121, 191);
+  color: white;
+  white-space: normal;
+}
+
+.board a.btn:hover {
+  background-color: rgba(0, 121, 191, .9);
+}
+
+.board.add form {
+  background: #eee;
+}

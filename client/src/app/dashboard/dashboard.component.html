@@ -6,5 +6,17 @@
   </div>
 
   <div class="row">
+    <div *ngFor="let board of boards" class="board col-sm-3 mb-sm-3">
+      <a [routerLink]="['/b', board.id]"
+         class="btn btn-lg w-100 h-100 p-sm-3 text-left" role="button">{{board.name}}</a>
+    </div>
+
+    <div class="board add col-sm-3">
+      <form class="rounded w-100 h-100 p-sm-3">
+        <input #boardName class="form-control" placeholder="Board name" type="text">
+        <button (click)="addBoard(boardName.value); boardName.value=''"
+          class="btn btn-success btn-sm mt-sm-2" type="submit">Create</button>
+      </form>
+    </div>
   </div>
 </div>

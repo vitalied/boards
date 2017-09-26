@@ -5,14 +5,18 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 
+import { BoardService } from './board/board.service';
+
 import { AppComponent } from './app.component';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { BoardComponent } from './board/board.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    DashboardComponent,
+    BoardComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +24,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    BoardService
+  ],
   bootstrap: [
     AppComponent
   ]
