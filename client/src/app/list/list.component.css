@@ -1,0 +1,17 @@
+.list {
+  background-color: #CDD2D4;
+  width: 250px;
+  vertical-align: top;
+}
+
+.list-name {
+  font-weight: bold;
+  font-size: 0.9em;
+  cursor: move;
+}
+
+.list-content {
+  min-height: 30px;
+  max-height: calc(100vh - 230px);
+  overflow-y: auto;
+}

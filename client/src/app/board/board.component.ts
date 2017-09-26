@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import { Board } from './board';
 import { BoardService } from './board.service';
+import { ListService } from '../list/list.service';
 
 @Component({
   selector: 'app-board',
@@ -14,6 +15,7 @@ export class BoardComponent implements OnInit {
 
   constructor(
     private boardService: BoardService,
+    private listService: ListService,
     private _route: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -22,5 +24,9 @@ export class BoardComponent implements OnInit {
 
   getBoard(id: number): void {
     this.boardService.getBoard(id).subscribe(board => this.board = board);
+  }
+
+  addList(name: string): void {
+    this.listService.addList(this.board.id, name).subscribe(list => this.board.lists.push(list));
   }
 }

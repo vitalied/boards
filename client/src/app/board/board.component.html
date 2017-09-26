@@ -2,5 +2,16 @@
   <h5 class="board-name mx-sm-4 mb-sm-3 pt-sm-4">{{ board.name }}</h5>
 
   <div class="board-content pl-sm-4 pb-sm-5">
+    <div *ngFor="let list of board.lists" class="sortable-list d-inline-block align-top">
+      <app-list [list]="list" class=""></app-list>
+    </div>
+
+    <div class="add-list rounded mr-sm-4 p-sm-2">
+      <form>
+        <input #listName class="form-control" placeholder="Add a list..." type="text">
+        <button (click)="addList(listName.value); listName.value=''"
+          class="btn btn-success btn-sm mt-sm-2" type="submit">Save</button>
+      </form>
+    </div>
   </div>
 </div>

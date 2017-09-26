@@ -12,3 +12,14 @@
   white-space: nowrap;
   overflow-x: auto;
 }
+
+.add-list {
+  background-color: #CDD2D4;
+  width: 250px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.add-list input {
+  background-color: #ddd;
+}
