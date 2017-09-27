@@ -1,0 +1,13 @@
+.git
+
+client
+
+/tmp/*
+/log/*
+
+.bash_history
+.byebug_hist
+.pry_history
+
+Dockerfile
+docker-compose.yml

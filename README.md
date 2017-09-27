@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Run:
 
-Things you may want to cover:
+```docker-compose up --build```
 
-* Ruby version
+In another console run:
 
-* System dependencies
+```docker-compose exec api bundle exec rails db:migrate```
 
-* Configuration
+Open this URL in browser:
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[http://localhost:4200](http://localhost:4200)
